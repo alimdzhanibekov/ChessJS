@@ -15,7 +15,9 @@ o888bood8P'   d8888888P  o888o o888o `Y888""8o o888o o888o
 888           888   888  888ooo888 `"Y88b.  `"Y88b.  
 `88b    ooo   888   888  888    .o o.  )88b o.  )88b 
  `Y8bood8P'  o888o o888o `Y8bod8P' 8""888P' 8""888P' 
-                                                     
+     
+                                                
+                                                
 
 let board = {
     "1_1": "wR1",

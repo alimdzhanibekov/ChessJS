@@ -1,3 +1,4 @@
+let dzanChess = "
 oooooooooo.              oooo                              
 `888'   `Y8b             `888                              
  888      888   oooooooo  888 .oo.    .oooo.   ooo. .oo.   
@@ -14,11 +15,7 @@ o888bood8P'   d8888888P  o888o o888o `Y888""8o o888o o888o
 888           888P"Y88b  d88' `88b d88(  "8 d88(  "8 
 888           888   888  888ooo888 `"Y88b.  `"Y88b.  
 `88b    ooo   888   888  888    .o o.  )88b o.  )88b 
- `Y8bood8P'  o888o o888o `Y8bod8P' 8""888P' 8""888P' 
-     
-                                                
-                                                
-
+ `Y8bood8P'  o888o o888o `Y8bod8P' 8""888P' 8""888P' "
 let board = {
     "1_1": "wR1",
     "1_2": "wP1",

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <title>Game!</title>
+</head>
+
+<body>
+
+<div class="all">
+
+<div class="header flex justify-center">
+
+    <div class="newGameDiv font-semibold font-mono text-2xl newGame"> <button class="newGameBtn" onclick="location.reload()" > Новая Игра </button></div>
+
+    <div class="RecordsDiv font-semibold font-mono text-2xl records"> <button class="recordsBtn" onclick="toRecords()"> Таблица Рекордов </button></div>
+
+</div>
+
+    <div class="allGame flex justify-center">
+
+        <div class="gameOver" id = "idGameOver">
+            <div>
+                <p class = "text-center font-mono text-2xl" id = "theEnd"></p>
+            </div>
+            <form class="text-center formGameOver" id="formId">
+                <label class="block">
+
+                    <span class="">Кто играл белыми?</span>
+
+                    <input type="text" class= "wGamer" id="wGamerId"/>
+
+                    <br>
+
+                    <span class="">Кто играл черными?</span>
+
+                    <input type="text" class= "bGamer" id="bGamerId"/>
+
+                </label>
+                <button class = "font-semibold saveResult " onclick="saveRes()">Готово</button>
+            </form>
+            <button id = "secondButtonId" class = "font-semibold saveResult" onclick="saveRes()">Готово</button>
+
+
+
+        </div>
+
+        <div class="gameRecords" id = "idGameRecords">
+            <div>
+                <p class = "text-center font-semibold font-mono text-2xl">Таблица Рекордов</p>
+                <div id="recordsChess" class="font-semibold font-mono"></div>
+            </div>
+
+
+            <button class = "font-semibold saveResultRec" onclick="exitFromRecords()">Выйти</button>
+
+        </div>
+
+
+    <div class="boardInfo">
+    <table class="coordinates">
+
+        <tr>
+            <td class="number">8</td>
+            <td class="white" id="1_8" onclick="move(event)" style="background-image: url('../pieces/bR.png')"></td>
+            <td class="grey" id="2_8" onclick="move(event)" style="background-image: url('../pieces/bN.png')"></td>
+            <td class="white" id="3_8" onclick="move(event)" style="background-image: url('../pieces/bB.png')"></td>
+            <td class="grey" id="4_8" onclick="move(event)" style="background-image: url('../pieces/bQ.png')"></td>
+            <td class="white" id="5_8" onclick="move(event)" style="background-image: url('../pieces/bK.png')"></td>
+            <td class="grey" id="6_8" onclick="move(event)" style="background-image: url('../pieces/bB.png')"></td>
+            <td class="white" id="7_8" onclick="move(event)" style="background-image: url('../pieces/bN.png')"></td>
+            <td class="grey" id="8_8" onclick="move(event)" style="background-image: url('../pieces/bR.png')"></td>
+        </tr>
+
+        <tr>
+            <td class="number">7</td>
+            <td class="grey" id="1_7" onclick="move(event)" style="background-image: url('../pieces/bP.png')"></td>
+            <td class="white" id="2_7" onclick="move(event)" style="background-image: url('../pieces/bP.png')"></td>
+            <td class="grey" id="3_7" onclick="move(event)" style="background-image: url('../pieces/bP.png')"></td>
+            <td class="white" id="4_7" onclick="move(event)" style="background-image: url('../pieces/bP.png')"></td>
+            <td class="grey" id="5_7" onclick="move(event)" style="background-image: url('../pieces/bP.png')"></td>
+            <td class="white" id="6_7" onclick="move(event)" style="background-image: url('../pieces/bP.png')"></td>
+            <td class="grey" id="7_7" onclick="move(event)" style="background-image: url('../pieces/bP.png')"></td>
+            <td class="white" id="8_7" onclick="move(event)" style="background-image: url('../pieces/bP.png')"></td>
+        </tr>
+
+        <tr>
+            <td class="number">6</td>
+            <td class="white" id="1_6" onclick="move(event)"></td>
+            <td class="grey" id="2_6" onclick="move(event)"></td>
+            <td class="white" id="3_6" onclick="move(event)"></td>
+            <td class="grey" id="4_6" onclick="move(event)"></td>
+            <td class="white" id="5_6" onclick="move(event)"></td>
+            <td class="grey" id="6_6" onclick="move(event)"></td>
+            <td class="white" id="7_6" onclick="move(event)"></td>
+            <td class="grey" id="8_6" onclick="move(event)"></td>
+        </tr>
+
+        <tr>
+            <td class="number">5</td>
+            <td class="grey" id="1_5" onclick="move(event)"></td>
+            <td class="white" id="2_5" onclick="move(event)"></td>
+            <td class="grey" id="3_5" onclick="move(event)"></td>
+            <td class="white" id="4_5" onclick="move(event)" ></td>
+            <td class="grey" id="5_5" onclick="move(event)"></td>
+            <td class="white" id="6_5" onclick="move(event)"></td>
+            <td class="grey" id="7_5" onclick="move(event)"></td>
+            <td class="white" id="8_5" onclick="move(event)"></td>
+        </tr>
+
+        <tr>
+            <td class="number">4</td>
+            <td class="white" id="1_4" onclick="move(event)"></td>
+            <td class="grey" id="2_4" onclick="move(event)"></td>
+            <td class="white" id="3_4" onclick="move(event)"></td>
+            <td class="grey" id="4_4" onclick="move(event)" ></td>
+            <td class="white" id="5_4" onclick="move(event)"></td>
+            <td class="grey" id="6_4" onclick="move(event)"></td>
+            <td class="white" id="7_4" onclick="move(event)"></td>
+            <td class="grey" id="8_4" onclick="move(event)"></td>
+        </tr>
+
+        <tr>
+            <td class="number">3</td>
+            <td class="grey" id="1_3" onclick="move(event)"></td>
+            <td class="white" id="2_3" onclick="move(event)"></td>
+            <td class="grey" id="3_3" onclick="move(event)"></td>
+            <td class="white" id="4_3" onclick="move(event)"></td>
+            <td class="grey" id="5_3" onclick="move(event)"></td>
+            <td class="white" id="6_3" onclick="move(event)"></td>
+            <td class="grey" id="7_3" onclick="move(event)" ></td>
+            <td class="white" id="8_3" onclick="move(event)"></td>
+        </tr>
+
+        <tr>
+            <td class="number">2</td>
+            <td class="white" id="1_2" onclick="move(event)" style="background-image: url('../pieces/wP.png')"></td>
+            <td class="grey" id="2_2" onclick="move(event)" style="background-image: url('../pieces/wP.png')"></td>
+            <td class="white" id="3_2" onclick="move(event)" style="background-image: url('../pieces/wP.png')"></td>
+            <td class="grey" id="4_2" onclick="move(event)" style="background-image: url('../pieces/wP.png')"> </td>
+            <td class="white" id="5_2" onclick="move(event)" style="background-image: url('../pieces/wP.png')"> </td>
+            <td class="grey" id="6_2" onclick="move(event)" style="background-image: url('../pieces/wP.png')"></td>
+            <td class="white" id="7_2" onclick="move(event)" style="background-image: url('../pieces/wP.png')"></td>
+            <td class="grey" id="8_2" onclick="move(event)" style="background-image: url('../pieces/wP.png')"></td>
+        </tr>
+
+        <tr>
+            <td class="number">1</td>
+            <td class="grey" id="1_1" onclick="move(event)" style="background-image: url('../pieces/wR.png')"></td>
+            <td class="white" id="2_1" onclick="move(event)" style="background-image: url('../pieces/wN.png')"></td>
+            <td class="grey" id="3_1" onclick="move(event)" style="background-image: url('../pieces/wB.png')"></td>
+            <td class="white" id="4_1" onclick="move(event)" style="background-image: url('../pieces/wQ.png')"></td>
+            <td class="grey" id="5_1" onclick="move(event)" style="background-image: url('../pieces/wK.png')"></td>
+            <td class="white" id="6_1" onclick="move(event)" style="background-image: url('../pieces/wB.png')"></td>
+            <td class="grey" id="7_1" onclick="move(event)" style="background-image: url('../pieces/wN.png')"></td>
+            <td class="white" id="8_1" onclick="move(event)" style="background-image: url('../pieces/wR.png')"></td>
+        </tr>
+
+        <tr>
+            <td class="word"></td>
+            <td class="word">A</td>
+            <td class="word">B</td>
+            <td class="word">C</td>
+            <td class="word">D</td>
+            <td class="word">E</td>
+            <td class="word">F</td>
+            <td class="word">G</td>
+            <td class="word">H</td>
+        </tr>
+
+    </table>
+
+
+        </div>
+
+        <div class="movesInfo">
+            <div class="wMove font-semibold font-mono text-2xl " id="move">
+                Ходят Белые
+            </div>
+
+            <div id="history" class="flex flex-row font-semibold">
+                <div id = "leftMoves" class = "basis-1/2 lMoves"> </div>
+                <div> </div>
+                <div id = "rightMoves" class = "basis-1/2 rMoves"> </div>
+            </div>
+
+        </div>
+
+        </div>
+
+</div>
+
+<script src="../js/main.js"></script>
+
+</body>
+
+</html>

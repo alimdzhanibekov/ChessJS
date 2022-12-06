@@ -1,0 +1,195 @@
+body {
+    background-image: url('../pieces/mainBackground.png');
+}
+
+.newGameDiv, .RecordsDiv {
+    color: white;
+    background-color: #7B61FF;
+}
+:root{
+    --myPurple: #7B61FF;
+    --myGrey: #B7C0D8;
+    --myWhite: #E8EDF9;
+}
+
+.dzhanChess, .newGame, .records{
+    margin-top: 5px;
+    border: 4px solid var(--myPurple);
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0px 0px 15px #7B61FF;
+}
+
+.records {
+    margin-left: 20px;
+}
+
+.coordinates{
+    margin-top: 45px;
+}
+
+.grey {
+    background-color: var(--myGrey)
+}
+
+.white{
+    background-color: var(--myWhite)
+}
+
+.word{
+    padding-left: 37px;
+    padding-bottom: 45px;
+    font-weight: bold;
+}
+
+td{
+    width: 80px;
+    height: 80px;
+    background-position: center;
+}
+
+.number{
+    padding-left: 65px;
+    font-weight: bold;
+}
+
+.wMove{
+    margin-top: 45px;
+    border: 3px solid #7B61FF;
+    border-radius: 10px;
+    padding: 7px;
+    width: 250px;
+    text-align: center;
+    background-color: #7B61FF;
+    color: white;
+    box-shadow: 0px 0px 15px #7B61FF;
+
+}
+
+#history {
+    border: 3px solid var(--myPurple);
+    border-radius: 5px;
+    position: absolute;
+    width: 250px;
+    word-wrap: break-word;
+    margin-top: 5px;
+    text-align: left;
+    padding: 10px;
+    overflow: auto;
+    height: 583px;
+    box-shadow: 0px 0px 10px #7B61FF;
+    background-color: ghostwhite;
+}
+
+.point {
+    width: 12px;
+    height: 12px;
+    background: #7B61FF;
+    opacity: 0.75;
+    border-radius: 12px;
+    margin-left: 33px;
+}
+
+.allGame{
+    height: 100%;
+}
+
+input {
+    margin-left: 20px;
+}
+
+.movesInfo{
+    margin-left: 30px;
+}
+
+.lMoves {
+    text-align: left;
+}
+
+.rMoves{
+    text-align: right;
+}
+
+.gameOver {
+    width: 315px;
+    height: 315px;
+    z-index: 9;
+    position: absolute;
+    background-color: ghostwhite;
+    top: 20%;
+    border: 3px solid #7B61FF;
+    border-radius: 10px;
+    display: none;
+    margin-top: 30px;
+    box-shadow: 0px 0px 10px #7B61FF;
+}
+
+.gameRecords {
+    width: 315px;
+    height: 415px;
+    z-index: 9;
+    position: absolute;
+    background-color: ghostwhite;
+    top: 20%;
+    border: 3px solid #7B61FF;
+    border-radius: 10px;
+    display: none;
+    margin-top: 30px;
+    box-shadow: 0px 0px 10px #7B61FF;
+}
+
+.wGamer, .bGamer {
+    border: 2px solid #7B61FF;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+#formId {
+    display: none;
+}
+
+.formGameOver{
+    margin-bottom: 30px;
+}
+
+.saveResult {
+    border: 3px solid #7B61FF;
+    border-radius: 10px;
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    left: 18%;
+    top: 75%;
+    background-color: #7B61FF;
+    color: white;
+    box-shadow: 0px 0px 10px #7B61FF;
+}
+
+#recordsChess {
+    padding: 5px 0 2px 10px;
+    overflow: auto;
+    width: 310px;
+    height: 300px;
+
+}
+
+#theEnd {
+    padding-top: 20px;
+}
+
+.saveResultRec {
+    border: 3px solid #7B61FF;
+    border-radius: 10px;
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    left: 18%;
+    top: 85%;
+    background-color: #7B61FF;
+    color: white;
+    box-shadow: 0px 0px 10px #7B61FF;
+}
+
+#secondButtonId{
+    display: none;
+}
